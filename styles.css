@@ -13,22 +13,22 @@ body, h1, h2, p {
 }
 
 body {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Outer green background */
     line-height: 1.6;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 1rem;
+    padding: 1rem; /* Ensure padding around the entire body */
 }
 
-/* Content Wrapper: Main content box with padding and white background */
+/* Content Wrapper: Main content box */
 .content-wrapper {
-    width: 95%;
+    width: 90%; /* Adjusted for better mobile fit */
     max-width: 1200px;
     background-color: var(--white-bg-color);
     border: 2px solid var(--border-color);
-    padding: 1.5rem;
+    padding: 2rem;
     box-sizing: border-box;
 }
 
@@ -50,32 +50,16 @@ nav .logo {
     font-weight: bold;
 }
 
-.nav-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.divider {
-    border-top: 2px solid var(--border-color);
-    flex-grow: 1;
-    margin: 0 20px;
-}
-
 .nav-links {
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 0.5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
 }
 
 .nav-links li {
     display: inline;
+    margin: 10px;
 }
 
 .nav-links a {
@@ -86,23 +70,19 @@ nav .logo {
 
 /* Hero Section */
 .hero {
-    color: #333;
-    padding: 2rem 0;
     text-align: center;
+    padding: 2rem 0;
 }
 
 .hero blockquote {
     font-style: italic;
     font-size: 1.2rem;
-    margin-top: 1rem;
     color: #444;
-    margin-bottom: 0;
 }
 
 .hero blockquote span {
     display: block;
     margin-top: 0.5rem;
-    margin-bottom: -0.5rem;
     font-weight: bold;
 }
 
@@ -126,18 +106,37 @@ nav .logo {
     max-width: 700px;
 }
 
-/* History Section */
+@media (min-width: 768px) {
+    .about-flex {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .about-text {
+        margin-left: 2rem;
+    }
+}
+
+/* History Section - Image & Text Layout */
 .history {
     display: flex;
     align-items: center;
     gap: 1rem;
-    text-align: left;
+    flex-direction: column; /* Default mobile layout */
+    text-align: center;
+}
+
+.history .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .history-img {
-    width: 250px;
+    width: 100%; /* Responsive image */
+    max-width: 250px;
     height: auto;
-    margin-right: 20px;
+    margin-bottom: 1rem;
 }
 
 .history p {
@@ -146,16 +145,25 @@ nav .logo {
     color: #333;
 }
 
-/* Contact Form */
+@media (min-width: 768px) {
+    .history {
+        flex-direction: row;
+        text-align: left;
+    }
+    .history .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .history-img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+
+/* Contact Page Styles */
 .contact {
     padding: 3rem 0;
     text-align: center;
-}
-
-.contact h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 2rem;
 }
 
 .contact-form {
@@ -193,39 +201,6 @@ nav .logo {
 
 /* Footer */
 footer {
-    color: white;
     text-align: center;
     padding: 1rem 0;
-}
-
-/* Responsive Design Adjustments */
-@media (max-width: 768px) {
-    .about-flex {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        margin-left: 0;
-    }
-
-    .history {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .history-img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links li {
-        display: block;
-        margin: 5px 0;
-    }
 }
