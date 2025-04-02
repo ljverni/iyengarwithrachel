@@ -38,7 +38,7 @@ nav {
     padding: 1.5rem 0;
     background-color: var(--white-bg-color);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Ensure the logo and nav links are stacked */
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -52,17 +52,20 @@ nav {
     border-bottom: 2px solid var(--border-color); /* Thin separator */
 }
 
+/* Logo at the top, centered */
 nav .logo {
     font-size: 2rem;
+    font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: bold;
+    margin-bottom: 10px; /* Space between logo and nav links */
+    text-align: center;
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center links */
     gap: 20px;
     list-style: none;
     padding: 0;
@@ -126,7 +129,6 @@ nav .logo {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 /* Hero Section */
 .hero {
@@ -269,19 +271,19 @@ footer {
 .dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown button */
-  .dropbtn {
+}
+
+/* Dropdown button */
+.dropbtn {
     text-decoration: none;
     font-weight: bold;
     color: black;
     padding: 10px;
     display: block;
-  }
-  
-  /* Dropdown content (hidden by default) */
-  .dropdown-content {
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
@@ -291,29 +293,29 @@ footer {
     list-style: none;
     padding: 0;
     border: 1px solid #ccc;
-  }
-  
-  /* Dropdown links */
-  .dropdown-content li {
+}
+
+/* Dropdown links */
+.dropdown-content li {
     display: block;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  /* Show dropdown when hovering */
-  .dropdown:hover .dropdown-content {
+}
+
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-content {
     display: block;
-  }
-  
-  /* Add hover effect */
-  .dropdown-content a:hover {
+}
+
+/* Add hover effect */
+.dropdown-content a:hover {
     background-color: #f1f1f1;
-  }
+}
 
 /* Timetable Section */
 .timetable {
@@ -386,4 +388,71 @@ footer {
     .class-card {
         width: 80%;
     }
+}
+
+/* Social Icons */
+.social-icons img {
+    width: 80px; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+nav .container {
+    display: flex;
+    flex-direction: column; /* Stack logo and nav links */
+    align-items: center; /* Center everything */
+    position: relative; /* Allows absolute positioning for social icons */
+}
+
+nav .social-icons {
+    margin-top: 15px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Ensures nav links are centered */
+    gap: 20px;
+    width: 100%;
+}
+
+.social-icons a {
+    margin-left: -50px; /* Adds spacing between icons */
+}
+
+.social-icons {
+    position: absolute;
+    left: 700px; /* Adjust this for spacing from the edge */
+    top: 90%;
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    gap: 10px;
+}
+
+/* Right-align social icons */
+.float-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.logo-image img {
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.logo-image {
+    position: absolute;
+    right: 500px; /* Adjust this for spacing from the edge */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    gap: 15px;
+}
+
+/* Right-align social icons */
+.float-left {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
 }
