@@ -1,0 +1,72 @@
+/* Timetable Section */
+.timetable {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.timetable-heading {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.timetable-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.class-card {
+    background-color: var(--white-bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    width: 30%;
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+}
+
+.class-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.class-details {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.class-details li {
+    font-size: 1rem;
+    color: #555;
+}
+
+.class-label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.class-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .timetable-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .class-card {
+        width: 80%;
+    }
+}

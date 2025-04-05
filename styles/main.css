@@ -1,0 +1,58 @@
+/* Global Styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+:root {
+    --primary-color: #7d927d; /* Green background */
+    --white-bg-color: #fff; /* White inner content background */
+    --border-color: #4a4a4a; /* Black border color */
+}
+
+body {
+    background-color: var(--primary-color); /* Outer green background */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem; /* Ensure padding around the entire body */
+}
+
+/* Content Wrapper: Main content box */
+.content-wrapper {
+    width: 90%; /* Adjusted for better mobile fit */
+    max-width: 1200px;
+    background-color: var(--white-bg-color);
+    border: 2px solid var(--border-color);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.hero blockquote span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+}
