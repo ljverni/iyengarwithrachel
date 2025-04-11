@@ -35,7 +35,7 @@ body {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 0 1rem;
 }
 
 .hero blockquote {
@@ -54,5 +54,14 @@ body {
 /* Footer */
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 3rem 0 .5rem;
 }
+
+.section-divider {
+    height: 2px;
+    width: 80%;
+    background: linear-gradient(to right, #aaa, #ddd, #aaa);
+    border-radius: 2px;
+    margin: 10px auto 50px; /* top 10px, bottom 30px */
+  }
+  

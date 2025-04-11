@@ -1,22 +1,27 @@
 /* Navigation Bar */
 .nav-wrapper {
     width: 100%;
-    padding: 1.5rem 0;
+    /* padding: 1.5rem 0; */
     background-color: var(--white-bg-color);
     /* display: flex;
     flex-direction: row;
     align-items: center; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
 }
 
 
 .nav-headers {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10px;
     /* border: 8px solid black; */
     flex-wrap: wrap;
+    align-items: center;
     
 }
 
@@ -24,7 +29,7 @@
     display: flex;
     /* background-color: aquamarine; */
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     /* flex-grow: 1; */
     /* height: 150px;
     width: 200px; */
@@ -35,25 +40,29 @@
 
 
 nav .main-title {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 45px;
+    /* font-weight: bold; */
     color: var(--primary-color);
-    text-decoration: none;
+    /* text-decoration: none; */
+    font-family: 'Playfair Display', serif;
     /* flex-grow: 1; */
+    /* text-decoration: underline; */
 }
 
 
 .nav-links {
         display: flex;
+        font-size: 20px;
         justify-content: center;
-        list-style: none;
-        gap: 15px;
+        font-family: 'Playfair Display', serif;
+        gap: 55px;
         flex-wrap: wrap;
+        background-color: var(--primary-color);
 }
 
 
 .nav-links a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-decoration: none;
     color: #222;
     font-weight: bold;
@@ -111,11 +120,11 @@ nav .main-title {
 }
 
 
-/* #social-media{
-    align-self: baseline;
+#social-media{
+    align-self: flex-end;
 }
 
-#logo-pic{
+/* #logo-pic{
     align-self: baseline;
 } */
 
@@ -133,4 +142,22 @@ img[src="images/facebook-logo.png"] {
 img[src="images/logo.png"] {
     width: 150px;
     height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .nav-headers {
+        justify-content: center;
+    }
+    .main-title {
+        text-align: center;
+        width: 100%;
+    }
+    .nav-links {
+        gap: 15px; /* or whatever value feels good */
+    }
+
+    .nav-links a {
+        font-size: 1.3rem;
+    }
 }
