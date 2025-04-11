@@ -1,68 +1,69 @@
 /* Navigation Bar */
-nav {
+.nav-wrapper {
     width: 100%;
     padding: 1.5rem 0;
     background-color: var(--white-bg-color);
-    display: flex;
-    flex-direction: column; /* Ensure the logo and nav links are stacked */
-    align-items: center;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: center;
 }
 
-/* Logo / Site Title */
-.nav-wrapper {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem; /* Add space between title and links */
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--border-color); /* Thin separator */
+
+.nav-headers {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    /* border: 8px solid black; */
+    flex-wrap: wrap;
+    
 }
 
-/* Logo at the top, centered */
-nav .logo {
-    font-size: 2rem;
+.nav-header {
+    display: flex;
+    /* background-color: aquamarine; */
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-grow: 1; */
+    /* height: 150px;
+    width: 200px; */
+    /* flex-shrink: 1; */
+    /* flex-shrink: 1;
+    min-width: 30px; */
+}
+
+
+nav .main-title {
+    font-size: 30px;
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
-    margin-bottom: 10px; /* Space between logo and nav links */
-    text-align: center;
+    /* flex-grow: 1; */
 }
 
-/* Navigation Links */
+
 .nav-links {
-    display: flex;
-    justify-content: center; /* Center links */
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 15px;
+        flex-wrap: wrap;
 }
 
-.nav-links li {
-    display: inline-block;
-    position: relative; /* Ensure dropdown stays aligned */
-}
 
 .nav-links a {
     font-size: 1.2rem;
     text-decoration: none;
     color: #222;
     font-weight: bold;
-    padding: 10px 15px;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     display: inline-block;
-    vertical-align: middle; /* Align all links */
+    vertical-align: middle;
 }
 
-/* Fix Dropdown Alignment */
-.dropdown .dropbtn {
-    padding: 10px 15px; /* Match padding with other links */
-    display: inline-block;
-    vertical-align: middle; /* Align with other links */
-}
 
-/* Dropdown Styling */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -78,54 +79,27 @@ nav .logo {
     display: block;
 }
 
-.dropdown-content a {
-    display: block;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: #222;
-    transition: background-color 0.3s ease;
-}
-
 .dropdown-content a:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-/* Show dropdown on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Dropdown container */
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown button */
+
 .dropbtn {
     text-decoration: none;
     font-weight: bold;
     color: black;
-    padding: 10px;
-    display: block;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    list-style: none;
-    padding: 0;
-    border: 1px solid #ccc;
-}
-
-/* Dropdown links */
-.dropdown-content li {
     display: block;
 }
 
@@ -136,81 +110,27 @@ nav .logo {
     display: block;
 }
 
-/* Show dropdown when hovering */
-.dropdown:hover .dropdown-content {
-    display: block;
+
+/* #social-media{
+    align-self: baseline;
 }
 
-/* Add hover effect */
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+#logo-pic{
+    align-self: baseline;
+} */
+
+img[src="images/Instagram-Logo.png"] {
+    width: 75px; 
+    height: auto;
+}
+
+img[src="images/facebook-logo.png"] {
+    width: 75px; 
+    height: auto;
 }
 
 
-
-/* Social Icons */
-.social-icons img {
-    width: 80px; /* Adjust width as needed */
-    height: auto; /* Maintains aspect ratio */
-}
-
-nav .container {
-    display: flex;
-    flex-direction: column; /* Stack logo and nav links */
-    align-items: center; /* Center everything */
-    position: relative; /* Allows absolute positioning for social icons */
-}
-
-nav .social-icons {
-    margin-top: 15px;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center; /* Ensures nav links are centered */
-    gap: 20px;
-    width: 100%;
-}
-
-.social-icons a {
-    margin-left: -50px; /* Adds spacing between icons */
-}
-
-.social-icons {
-    position: absolute;
-    left: 700px; /* Adjust this for spacing from the edge */
-    top: 90%;
-    transform: translateY(-50%); /* Center vertically */
-    display: flex;
-    gap: 10px;
-}
-
-/* Right-align social icons */
-.float-right {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.logo-image img {
-    width: 250px; /* Adjust width as needed */
-    height: auto; /* Maintains aspect ratio */
-}
-
-.logo-image {
-    position: absolute;
-    right: 500px; /* Adjust this for spacing from the edge */
-    top: 50%;
-    transform: translateY(-50%); /* Center vertically */
-    display: flex;
-    gap: 15px;
-}
-
-/* Right-align social icons */
-.float-left {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 10px;
+img[src="images/logo.png"] {
+    width: 150px;
+    height: auto;
 }
