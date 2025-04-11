@@ -65,3 +65,13 @@ footer {
     margin: 10px auto 50px; /* top 10px, bottom 30px */
   }
   
+
+@media (max-width: 768px) {
+    body {
+        padding: 0; /* Remove all padding from the body */
+    }
+
+    .content-wrapper {
+        width: 100%; /* Ensure the content wrapper takes full width */
+    }
+}
