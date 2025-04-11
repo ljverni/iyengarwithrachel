@@ -154,10 +154,10 @@ img[src="images/logo.png"] {
         width: 100%;
     }
     .nav-links {
-        gap: 15px; /* or whatever value feels good */
+        gap: 10px;
     }
 
     .nav-links a {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 }
