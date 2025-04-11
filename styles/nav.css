@@ -146,12 +146,19 @@ img[src="images/logo.png"] {
 
 
 @media (max-width: 768px) {
+
+    /* .nav-wrapper {
+        flex-direction: column;
+    } */
+
     .nav-headers {
         justify-content: center;
     }
     .main-title {
+        font-size: 35px;
         text-align: center;
         width: 100%;
+        order: 1;
     }
     .nav-links {
         gap: 10px;
@@ -160,4 +167,30 @@ img[src="images/logo.png"] {
     .nav-links a {
         font-size: 1.2rem;
     }
+
+    img[src="images/Instagram-Logo.png"] {
+        width: 50px; 
+        height: auto;
+    }
+    
+    img[src="images/facebook-logo.png"] {
+        width: 50px; 
+        height: auto;
+    }
+    
+    
+    img[src="images/logo.png"] {
+        width: 125px;
+        height: auto;
+    }
+
+    
+    /* #logo-pic {
+        order: 2;
+    }
+
+    #social-media {
+        order: 3;
+    } */
 }
+
