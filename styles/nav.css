@@ -1,78 +1,64 @@
 /* Navigation Bar */
 .nav-wrapper {
     width: 100%;
-    /* padding: 1.5rem 0; */
     background-color: var(--white-bg-color);
-    /* display: flex;
-    flex-direction: row;
-    align-items: center; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
 }
-
 
 .nav-headers {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    /* border: 8px solid black; */
     flex-wrap: wrap;
     align-items: center;
-    
 }
 
 .nav-header {
     display: flex;
-    /* background-color: aquamarine; */
     justify-content: center;
     align-items: center;
-    /* flex-grow: 1; */
-    /* height: 150px;
-    width: 200px; */
-    /* flex-shrink: 1; */
-    /* flex-shrink: 1;
-    min-width: 30px; */
 }
 
-
+/* Main title */
 nav .main-title {
     font-size: 45px;
-    /* font-weight: bold; */
     color: var(--primary-color);
-    /* text-decoration: none; */
     font-family: 'Playfair Display', serif;
-    /* flex-grow: 1; */
-    /* text-decoration: underline; */
 }
 
+.nav-link {
+    flex: 1;
+    text-align: center;
+}
 
+/* Navigation links container */
 .nav-links {
-        display: flex;
-        font-size: 20px;
-        justify-content: center;
-        font-family: 'Playfair Display', serif;
-        gap: 55px;
-        flex-wrap: wrap;
-        background-color: var(--primary-color);
+    display: flex;
+    font-family: 'Playfair Display', serif;
+    justify-content: space-between; /* or 'stretch' if needed */
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    flex-basis: 100%;
 }
 
-
+/* Individual link styles */
 .nav-links a {
+    display: block;
+    width: 100%;
     font-size: 1.4rem;
     text-decoration: none;
     color: #222;
     font-weight: bold;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    display: inline-block;
-    vertical-align: middle;
 }
 
-
+/* Dropdown styles */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -80,7 +66,6 @@ nav .main-title {
     min-width: 180px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
-    padding: 10px 0;
     text-align: left;
 }
 
@@ -93,41 +78,21 @@ nav .main-title {
     color: white;
 }
 
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-
-.dropbtn {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-    display: block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-
+/* Social media icons */
 #social-media{
     align-self: flex-end;
 }
 
-/* #logo-pic{
-    align-self: baseline;
-} */
-
+/* Image styles */
 img[src="images/Instagram-Logo.png"] {
     width: 75px; 
     height: auto;
@@ -138,28 +103,29 @@ img[src="images/facebook-logo.png"] {
     height: auto;
 }
 
-
 img[src="images/logo.png"] {
     width: 150px;
     height: auto;
 }
 
+/* Add vertical separator between links */
+.nav-link:not(:last-child) {
+    border-right: 2px solid #ddd; /* vertical separator */
+    /* padding-right: 1.5rem; */
+}
 
+/* On small screens, stack the links and remove separators */
 @media (max-width: 768px) {
-
-    /* .nav-wrapper {
-        flex-direction: column;
-    } */
-
     .nav-headers {
         justify-content: center;
     }
+
     .main-title {
         font-size: 35px;
         text-align: center;
         width: 100%;
-        order: 1;
     }
+
     .nav-links {
         gap: 10px;
     }
@@ -168,29 +134,25 @@ img[src="images/logo.png"] {
         font-size: 1.2rem;
     }
 
+    /* Remove separator on small screens */
+    .nav-link {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    /* Adjust image sizes on small screens */
     img[src="images/Instagram-Logo.png"] {
         width: 50px; 
         height: auto;
     }
-    
+
     img[src="images/facebook-logo.png"] {
         width: 50px; 
         height: auto;
     }
-    
-    
+
     img[src="images/logo.png"] {
         width: 125px;
         height: auto;
     }
-
-    
-    /* #logo-pic {
-        order: 2;
-    }
-
-    #social-media {
-        order: 3;
-    } */
 }
-
