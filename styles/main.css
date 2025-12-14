@@ -101,6 +101,7 @@ footer {
     height: 250px;
     border-radius: 10%;
     object-fit: cover;
+    object-position: top;
   }
   
   .welcome-text {

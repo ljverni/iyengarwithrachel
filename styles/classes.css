@@ -18,7 +18,8 @@
     width: 250px;
     height: 250px;
     border-radius: 10%;
-    object-fit: cover;  
+    object-fit: cover;
+    object-position: top;
   }
   
   .classes-text {
@@ -54,7 +55,12 @@
 
 /* Lists */
 .classes-text ul {
-  margin: 0 0 1rem 1.2rem;         /* reduce spacing and keep indentation */
-  padding: 0;
+  margin: 0 0 1rem 0;        /* remove default left margin */
+  padding-left: 1.2rem;      /* indent bullets slightly */
+  list-style-position: inside; /* ensures bullet stays with the text */
 }
 
+.classes-text li {
+  margin: 0.3rem 0;           /* spacing between items */
+  line-height: 1.5;           /* optional, makes text more readable */
+}
