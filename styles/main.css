@@ -79,6 +79,49 @@ footer {
     }
 }
 
+/* Welcome */
+
+.welcome {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    max-width: 900px;
+    justify-content: center;
+  }
+  
+  .welcome-flex {
+    display: flex;
+    flex-direction: column;     /* Stack on small screens */
+    align-items: center;        /* Center image and text horizontally */
+    text-align: center;
+  }
+  
+  .welcome-flex img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    object-fit: cover;
+  }
+  
+  .welcome-text {
+    max-width: 700px;
+    margin-top: 1rem;           /* Add space between image and text */
+  }
+  
+  @media (min-width: 768px) {
+    .welcome-flex {
+      flex-direction: row;      /* Side-by-side on large screens */
+      align-items: center;      /* Vertically align image & text */
+      text-align: left;
+    }
+  
+    .welcome-text {
+      margin-top: 0;            /* Remove top margin */
+      margin-left: 2rem;        /* Space between image and text */
+    }
+  }
+  
+
 /* PASSWORD */
 #password-overlay {
     position: fixed;
