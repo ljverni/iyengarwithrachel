@@ -1,0 +1,60 @@
+/* About Section */
+.classes {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    max-width: 900px;
+    justify-content: center;
+  }
+  
+  .classes-flex {
+    display: flex;
+    flex-direction: column;     /* Stack on small screens */
+    align-items: center;        /* Center image and text horizontally */
+    text-align: center;
+  }
+  
+  .classes-flex img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    object-fit: cover;  
+  }
+  
+  .classes-text {
+    max-width: 700px;
+    margin-top: 1rem;           /* Add space between image and text */
+  }
+  
+  @media (min-width: 768px) {
+    .classes-flex {
+      flex-direction: row;      /* Side-by-side on large screens */
+      align-items: flex-start;      /* Vertically align image & text */
+      text-align: left;
+    }
+  
+    .classes-text {
+      margin-top: 0;            /* Remove top margin */
+      margin-left: 2rem;        /* Space between image and text */
+    }
+  }
+
+/* Underscored headers */
+.underscored {
+  display: inline-block;           /* border fits text width */
+  border-bottom: 2px solid #000;  /* underline */
+  padding-bottom: 2px;            /* space between text and underline */
+  margin: 1rem 0 0.5rem 0;        /* top and bottom spacing */
+}
+
+/* Paragraph spacing */
+.classes-text p {
+  margin: 0 0 1rem 0;              /* remove extra top margin, set bottom spacing */
+}
+
+/* Lists */
+.classes-text ul {
+  margin: 0 0 1rem 1.2rem;         /* reduce spacing and keep indentation */
+  padding: 0;
+}
+
